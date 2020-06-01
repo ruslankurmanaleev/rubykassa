@@ -1,4 +1,6 @@
 class RobokassaController < ActionController::Base
+  protect_from_forgery with: :null_session
+
   if respond_to?(:before_action)
     before_action :create_notification
   else
